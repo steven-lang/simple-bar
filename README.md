@@ -2,6 +2,8 @@
 
 A [yabai](https://github.com/koekeishiya/yabai) status bar widget for [Übersicht](https://github.com/felixhageloh/uebersicht) inspired by [nibar](https://github.com/kkga/nibar), [yabar](https://github.com/AlexNaga/yabar) and [this reddit post](https://www.reddit.com/r/unixporn/comments/chwk89/yabai_yabai_and_gruvbox_with_custom_ubersicht_bar/).
 
+⚠️ **As I do not pocess a M1 mac book I can't solve any issue happening on these models. Feel free to open some pull requests if you want to help me about these. See "Compatibility & requirements" section for more information.** ⚠️
+
 A more "lite" & less ressource greedy version is available [here](https://github.com/Jean-Tinland/simple-bar-lite).
 
 ## Features
@@ -30,17 +32,21 @@ A more "lite" & less ressource greedy version is available [here](https://github
 
 In order to make this custom bar work, you'll need to install both [yabai](https://github.com/koekeishiya/yabai) and [Übersicht](https://github.com/felixhageloh/uebersicht), both of them must be up to date. `simple-bar` supports both yabai v3 & yabai v4.
 
-Becareful, for Big Sur users, some actions must be taken in order to make yabai fully operational: [see here for more details](<https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#macos-big-sur---automatically-load-scripting-addition-on-startup>).
-
-`simple-bar` has been tested and is working on both Catalina, Big Sur & Monterey.
+Becareful, for Big Sur users (and above), some actions must be taken in order to make yabai fully operational: [see here for more details](<https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#macos-big-sur---automatically-load-scripting-addition-on-startup>).
 
 **It is important to note that you'll need to use yabai in `bsp` or `stack` layout mode in order to prevent app windows to overlap simple-bar.**
 
 On the first **simple-bar** execution, an alert should pop on your screen saying that Übersicht want access your browser control (only the first time you launch your favorite browser with **simple-bar** opened). It is required to agree to this in order to make the CurrentTrack widget work.
 
+**_`simple-bar` is optimized for the english language. Icon association is not localized._**
+
+**_`simple-bar` has only be fully tested on several Intel based Macs and is working on Catalina, Big Sur & Monterey. I can't guaranty it will fully work on all M1 Macs._**
+
+**_Mac book with top notch may be subject to display issues if you use the process widget: you can now uncheck "Center process widget" in the settings module.._**
+
 ## Preview
 
-![img](./images/preview.jpg)
+![img](./images/preview.png)
 
 You'll find more information & images on [simple-bar website](https://www.simple-bar.com/en/).
 
@@ -62,10 +68,7 @@ There is a setting in the settings module allowing a custom yabai path.
 
 ## Usage
 
-After cloning the project, simply activate both **simple-bar** widgets in Übersicht's widgets list.
-
-- `simple-bar-data-jsx`
-- `simple-bar-spaces-jsx`
+After cloning the project, simply activate **simple-bar** widget in Übersicht's widgets list: `simple-bar-index-jsx`.
 
 ## Settings
 
@@ -140,7 +143,7 @@ export const appIcons = {
 
 If there is no icon defined for a running process, there is a default one which will be used as fallback.
 
-Same as for themes, feel free to open an issue if you have an icon request.
+Same as for themes, feel free to post a message in [this issue](https://github.com/Jean-Tinland/simple-bar/issues/189) if you have an icon request.
 
 ### Override default styles
 
@@ -172,7 +175,7 @@ You can use the **Übersicht debug console** in order to inspect the widgets com
 - Gruvbox Material theme adaptation added thanks to [@is0n](https://github.com/is0n)
 - Amarena Dark theme implementation thanks to [@MikoMagni](https://github.com/MikoMagni)
 - Solarized Light & Dark themes implementation thanks to [@Joroovb](https://github.com/Joroovb)
-- CodingInSylens theme implementation thanks to [@Sylenss](https://github.com/Sylenss)
+- Sylens theme implementation thanks to [@Sylenss](https://github.com/Sylenss)
 - SpaceDuck theme implementation thanks to [@ZhongXiLu](https://github.com/ZhongXiLu)
 - Cisco theme implementation thanks to [@mrzone64](https://github.com/mrzone64)
 - Everyone opening issues that are helping me improve this little project by adding icons, fixing what they can, and every other things...
