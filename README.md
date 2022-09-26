@@ -1,6 +1,6 @@
 # <img src="./images/logo-simple-bar.png" width="200" alt="simple-bar" />
 
-A [yabai](https://github.com/koekeishiya/yabai) status bar widget for [Übersicht](https://github.com/felixhageloh/uebersicht) inspired by [nibar](https://github.com/kkga/nibar), [yabar](https://github.com/AlexNaga/yabar) and [this reddit post](https://www.reddit.com/r/unixporn/comments/chwk89/yabai_yabai_and_gruvbox_with_custom_ubersicht_bar/).
+A [yabai](https://github.com/koekeishiya/yabai) status bar widget for [Übersicht](https://github.com/felixhageloh/uebersicht) inspired by [nibar](https://github.com/kkga/nibar), [yabar](https://github.com/AlexNaga/yabar) and [this reddit post](https://www.reddit.com/r/unixporn/comments/chwk89/yabai_yabai_and_gruvbox_with_custom_ubersicht_bar/). Visit **simple-bar** website [here](https://www.jeantinland.com/toolbox/simple-bar).
 
 ⚠️ **As I do not pocess a M1 mac book I can't solve any issue happening on these models. Feel free to open some pull requests if you want to help me about these. See "Compatibility & requirements" section for more information.** ⚠️
 
@@ -62,6 +62,14 @@ $ git clone https://github.com/Jean-Tinland/simple-bar $HOME/Library/Application
 
 [JetBrains Mono](https://www.jetbrains.com/lp/mono/) is used by default. You can set your own font in the "Global" settings tab.
 
+### For users having the latest ARM64 chipset devices (M1 and M2 variants)
+
+Yabai is installed by default in `/opt/homebrew/bin/yabai` path for arm64 chipset devices. In order to use simple-bar without having any errors, create a symbolic link of yabai's binary using the command provided below for simple-bar to work properly.
+
+```bash
+ln -s /opt/homebrew/bin/yabai /usr/local/bin/yabai
+```
+
 ### For users with a custom yabai install (path)
 
 There is a setting in the settings module allowing a custom yabai path.
@@ -72,7 +80,7 @@ After cloning the project, simply activate **simple-bar** widget in Übersicht's
 
 ## Settings
 
-As explained at the begining of this README file, Settings can be opened by pressing `cmd + ,` after cliking on **simple-bar** widget. You may want to click at the top center of the screen, where the process name of the current app is displayed in order to easily get focus on **simple-bar** before pressing `cmd + ,`.
+As explained at the begining of this README file, Settings can be opened by pressing `cmd + ,` after clicking on **simple-bar** widget. You may want to click at the top center of the screen, where the process name of the current app is displayed in order to easily get focus on **simple-bar** before pressing `cmd + ,`.
 
 In this settings module you'll find all the customization options available from layout to specific widgets show/hide toggle.
 
@@ -118,7 +126,7 @@ export const Caprine = (props) => (
   <Icon {...props}>
     <path d="M12 0C5.37 0 0 4.97 0 11.11c0 3.5 1.74 6.62 4.47 8.65V24l4.09-2.24c1.09.3 2.24.46 3.44.46 6.63 0 12-4.97 12-11.1C24 4.97 18.63 0 12 0zm1.2 14.96l-3.06-3.26-5.97 3.26L10.73 8l3.13 3.26L19.76 8l-6.57 6.96z" />
   </Icon>
-)
+);
 ```
 
 To link it to a process you'll need to get the Yabai process name and make the association in `simple-bar > lib > app-icons.js` :
@@ -178,4 +186,6 @@ You can use the **Übersicht debug console** in order to inspect the widgets com
 - Sylens theme implementation thanks to [@Sylenss](https://github.com/Sylenss)
 - SpaceDuck theme implementation thanks to [@ZhongXiLu](https://github.com/ZhongXiLu)
 - Cisco theme implementation thanks to [@mrzone64](https://github.com/mrzone64)
+- Material theme implementation thanks to [@devinbhatt](https://github.com/devinbhatt)
+- Night Owl theme implementation thanks to [@mdwitr0](https://github.com/mdwitr0)
 - Everyone opening issues that are helping me improve this little project by adding icons, fixing what they can, and every other things...
